@@ -18,4 +18,12 @@ public class StudentService {
     public List<Student> getStudents() {
         return this.studentRepository.findAll();
     }
+
+    public void createStudent(Student student) {
+        this.studentRepository.save(student);
+    }
+
+    public void deleteById(Long id) {
+        this.studentRepository.deleteById(id);
+    }
 }
